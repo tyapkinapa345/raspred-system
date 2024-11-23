@@ -14,3 +14,7 @@ TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 cp -r $DATA_DIR $BACKUP_DIR/data_$TIMESTAMP
 
 echo "Резервная копия создана: data_$TIMESTAMP"
+
+
+   echo "Это тестовый файл 1" > data/test1.txt
+   echo "Это тестовый файл 2" > data/test2.txt
