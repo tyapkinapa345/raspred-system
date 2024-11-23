@@ -19,14 +19,17 @@ create_backup() {
 
 # Функция для восстановления данных
 restore_data() {
-    echo "Restoring data from the latest backup..."
-    latest_backup=$(ls -t "$BACKUP_DIR" | head -n 1)
-    if [ -z "$latest_backup" ]; then
-        echo "No backups found!"
+    if [ -z "$1" ]; then
+        echo "Please provide the backup file name."
         return
     fi
-    cp "$BACKUP_DIR/$latest_backup" "$DATA_DIR/data.txt"
-    echo "Data restored from $latest_backup."
+    echo "Restoring data from backup: $1..."
+    if [ -f "$BACKUP_DIR/$1" ]; then
+        cp "$BACKUP_DIR/$1" "$DATA_DIR/data.txt"
+        echo "Data restored from $1."
+    else
+        echo "Backup file $1 not found!"
+    fi
 }
 
 # Функция для отображения всех резервных копий
@@ -44,12 +47,12 @@ case $1 in
         create_backup
         ;;
     restore)
-        restore_data
+        restore_data "$2"  # Передаем второй аргумент как имя резервной копии
         ;;
     list)
         list_backups
         ;;
     *)
-        echo "Usage: $0 {create|backup|restore|list}"
+        echo "Usage: $0 {create|backup|restore|list} [backup_file_name]"
         ;;
 esac
