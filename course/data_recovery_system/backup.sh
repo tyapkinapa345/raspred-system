@@ -1,6 +1,7 @@
 #!/bin/bash
-exec > /home/devops/course_project/logfile.log 2>&1
+exec > /home/devops/data_recovery_system/logfile.log 2>&1
 echo "Резервное копирование началось в $(date)"
+
 DATA_DIR="/home/devops/data_recovery_system/data"
 BACKUP_DIR="/home/devops/data_recovery_system/backups"
 
