@@ -4,8 +4,8 @@
 
    code --version
 # Настройка рабочей директории
-   mkdir ~/data_backup_system
-   cd ~/data_backup_system
+   mkdir ~/data_recovery_system
+   cd ~/data_recovery_system
 # Создайте структуру каталогов:
    mkdir data backups   
 # Создайте тестовые файлы
