@@ -1,7 +1,7 @@
 #!/bin/bash
 
-DATA_DIR="./data"
-BACKUP_DIR="./backups"
+DATA_DIR="/home/devops/data_recovery_system/data"
+BACKUP_DIR="/home/devops/data_recovery_system/backups"
 
 # Функция для создания данных
 create_data() {
