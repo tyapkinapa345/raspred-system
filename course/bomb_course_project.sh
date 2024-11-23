@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Файл для хранения данных
-DATA_FILE="home/devops/course_project/data/test1.txt"
+DATA_FILE="/home/devops/course_project/data/test1.txt"
 
 # Функция для записи данных
 write_data() {
