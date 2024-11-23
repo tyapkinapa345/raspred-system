@@ -1,6 +1,6 @@
    #!/bin/bash
 
-   BACKUP_DIR="./backups"
+   BACKUP_DIR="/home/devops/data_recovery_system/backups"
 
    # Последняя резервная копия
    LAST_BACKUP=$(ls -t $BACKUP_DIR | head -n 1)
