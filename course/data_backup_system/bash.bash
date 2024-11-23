@@ -1,6 +1,3 @@
-# Подготовка окружения
-   sudo apt update
-   sudo apt install rsync tar
 # Настройка рабочей директории
    mkdir ~/data_backup_system
    cd ~/data_backup_system
@@ -15,6 +12,9 @@
    chmod +x backup.sh
 # Запустите скрипт резервного копирования
    ./backup.sh
+# Имитация отказа
+   rm ~/data_backup_system/data/test1.txt
+   ls ~/data_backup_system/data
 # Создание механизма восстановления
    nano restore.sh
 # Сделайте скрипт исполняемым:
